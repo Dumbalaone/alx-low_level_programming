@@ -9,14 +9,13 @@ int main(void)
 
 	while (letter <= 'z')
 	{
-		if (letter % 2 == 0)
-		{
-			putchar(letter);
-		}
-		else
-		{
-			putchar(letter - 32);
-		}
+		putchar(letter);
+		letter++;
+	}
+	letter = 'A';
+	while (letter <= 'Z')
+	{
+		putchar(letter);
 		letter++;
 	}
 	putchar('\n');
