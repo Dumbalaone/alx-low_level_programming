@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void print_number(unsigned long long num);
+void print_number(unsigned long num);
 
 /**
  * main - Entry point of the program
@@ -9,7 +9,7 @@ void print_number(unsigned long long num);
  */
 int main(void)
 {
-	unsigned long long first = 1, second = 2, next;
+	unsigned long first = 1, second = 2, next;
 	int i;
 
 	print_number(first);
@@ -34,7 +34,7 @@ int main(void)
  *
  * @num: The number to print
  */
-void print_number(unsigned long long num)
+void print_number(unsigned long num)
 {
 	if (num == 0)
 	{
@@ -42,8 +42,9 @@ void print_number(unsigned long long num)
 		return;
 	}
 
-	char buffer[21];
+	char buffer[21]; /* Maximum number of characters for a 32-bit unsigned long */
 	int index = 0;
+	int i;
 
 	while (num > 0)
 	{
