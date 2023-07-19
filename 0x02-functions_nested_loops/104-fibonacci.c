@@ -10,6 +10,7 @@ void print_number(unsigned long num);
 int main(void)
 {
 	unsigned long first = 1, second = 2, next;
+
 	int i;
 
 	print_number(first);
@@ -36,25 +37,22 @@ int main(void)
  */
 void print_number(unsigned long num)
 {
-	int i;
-	char buffer[21];
-	int index = 0;
+	unsigned long divisor = 1;
+	unsigned long temp = num;
 
-	if (num == 0)
+	while (temp >= 10)
 	{
-		write(1, "0", 1);
-		return;
+		temp /= 10;
+		divisor *= 10;
 	}
 
-	while (num > 0)
+	while (divisor > 0)
 	{
-		buffer[index++] = '0' + num % 10;
-		num /= 10;
-	}
+		char digit = '0' + num / divisor;
 
-	for (i = index - 1; i >= 0; i--)
-	{
-		write(1, &buffer[i], 1);
+		write(1, &digit, 1);
+		num %= divisor;
+		divisor /= 10;
 	}
 }
 
