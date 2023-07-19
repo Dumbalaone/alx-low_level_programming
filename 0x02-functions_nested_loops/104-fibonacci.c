@@ -36,15 +36,15 @@ int main(void)
  */
 void print_number(unsigned long num)
 {
+	int i;
+	char buffer[21];
+	int index = 0;
+
 	if (num == 0)
 	{
 		write(1, "0", 1);
 		return;
 	}
-
-	char buffer[21]; /* Maximum number of characters for a 32-bit unsigned long */
-	int index = 0;
-	int i;
 
 	while (num > 0)
 	{
