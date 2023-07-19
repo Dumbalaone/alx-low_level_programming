@@ -9,7 +9,7 @@ int main(void)
 
 	int i;
 
-	printf("%lu", "%lu", prev_num, current_num);
+	printf("%lu, %lu", prev_num, current_num);
 
 	for (i = 2; i < 50; ++i)
 	{
