@@ -16,7 +16,7 @@ int main(void)
 	write(1, ", ", 2);
 	print_number(second);
 
-	for (i = 2; i < 98; ++i)
+	for (i = 2; i < 98; i++)
 	{
 		next = first + second;
 		write(1, ", ", 2);
@@ -51,7 +51,7 @@ void print_number(unsigned long long num)
 		num /= 10;
 	}
 
-	for (int i = index - 1; i >= 0; i--)
+	for (i = index - 1; i >= 0; i--)
 	{
 		write(1, &buffer[i], 1);
 	}
