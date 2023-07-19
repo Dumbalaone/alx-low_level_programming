@@ -19,5 +19,5 @@ int main(void)
 		current_num = temp;
 	}
 	printf("\n");
-	return 0;
+	return (0);
 }
