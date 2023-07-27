@@ -11,6 +11,7 @@ int main(void)
     char *p;
 
     p = rot13(s);
+
     printf("%s", p);
     printf("------------------------------------\n");
     printf("%s", s);
