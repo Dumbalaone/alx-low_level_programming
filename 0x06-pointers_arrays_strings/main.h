@@ -24,4 +24,5 @@ void print_buffer(char *b, int size);
 
 char *leet(char *n);
 
+int _putchar(char c);
 #endif
